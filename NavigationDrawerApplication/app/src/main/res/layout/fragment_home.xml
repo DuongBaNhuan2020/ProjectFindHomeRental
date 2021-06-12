@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment">
+
+<!--    <TextView-->
+<!--        android:id="@+id/text_home"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Xin chào Dương Bá Nhuận"-->
+<!--        android:layout_marginStart="8dp"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        android:layout_marginEnd="8dp"-->
+<!--        android:textAlignment="center"-->
+<!--        android:textSize="20sp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+<!--    <Button-->
+<!--        android:id="@+id/buttonhome"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"></Button>-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="58dp"
+        android:background="@drawable/header_background"
+        android:backgroundTint="@null"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/white_rectangle_background"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            >
+
+            <EditText
+                android:id="@+id/EditTextSearch"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="Tìm theo quận, tên đường, địa điểm"
+                android:imeOptions="actionSearch"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:textColor="@color/colorAccent"
+                android:textSize="16sp" />
+
+            <ImageButton
+                android:id="@+id/ImageButtonSearch"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/search_icon_background"
+                android:contentDescription="@string/app_name"
+                android:padding="6dp"
+                android:src="@drawable/ic_baseline_search_24" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+<!--    <ScrollView-->
+<!--        android:id="@+id/scrollView"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:overScrollMode="never"-->
+<!--        android:scrollbars="none"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/layoutHeader">-->
+<!--&lt;!&ndash;        app:layout_constraintTop_toBottomOf="@id/layoutHeader">&ndash;&gt;-->
+
+<!--        <RelativeLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent">-->
+<!--&lt;!&ndash;            app:layout_constraintTop_toBottomOf="@id/layoutHeader">&ndash;&gt;-->
+
+<!--            <GridLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:columnCount="2"-->
+<!--                android:rowCount="4">-->
+
+<!--                <androidx.cardview.widget.CardView-->
+<!--                    android:layout_width="160dp"-->
+<!--                    android:layout_height="180dp"-->
+<!--                    android:layout_row="0"-->
+<!--                    android:layout_rowWeight="1"-->
+<!--                    android:layout_column="0"-->
+<!--                    android:layout_columnWeight="1"-->
+<!--                    android:layout_margin="10dp"-->
+<!--                    android:padding="10dp"-->
+<!--                    app:cardBackgroundColor="@color/white"-->
+<!--                    app:cardCornerRadius="10dp"-->
+<!--                    app:cardElevation="10dp">-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:orientation="vertical">-->
+
+<!--                        <ImageView-->
+<!--                            android:layout_width="100dp"-->
+<!--                            android:layout_height="100dp"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:src="@drawable/tro1" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:text="Nhà trọ"-->
+<!--                            android:textAllCaps="true"-->
+<!--                            android:textStyle="bold" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:text="1.6 triệu VND/căn"-->
+<!--                            android:textColor="#FF5722"-->
+<!--                            android:textStyle="bold" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="40dp"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:text="88/9 Nguyễn Văn Trỗi, Quận Phú Nhuận" />-->
+<!--                    </LinearLayout>-->
+<!--                </androidx.cardview.widget.CardView>-->
+
+<!--                <androidx.cardview.widget.CardView-->
+<!--                    android:layout_width="160dp"-->
+<!--                    android:layout_height="180dp"-->
+<!--                    android:layout_row="0"-->
+<!--                    android:layout_rowWeight="1"-->
+<!--                    android:layout_column="1"-->
+<!--                    android:layout_columnWeight="1"-->
+<!--                    android:layout_margin="10dp"-->
+<!--                    android:padding="10dp"-->
+<!--                    app:cardBackgroundColor="@color/white"-->
+<!--                    app:cardCornerRadius="10dp"-->
+<!--                    app:cardElevation="10dp">-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:orientation="vertical">-->
+
+<!--                        <ImageView-->
+<!--                            android:layout_width="100dp"-->
+<!--                            android:layout_height="100dp"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:src="@drawable/tro2" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:text="Nhà trọ"-->
+<!--                            android:textAllCaps="true"-->
+<!--                            android:textStyle="bold" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:text="1.6 triệu VND/căn"-->
+<!--                            android:textColor="#FF5722"-->
+<!--                            android:textStyle="bold" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="40dp"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:text="88/9 Nguyễn Văn Trỗi, Quận Phú Nhuận" />-->
+<!--                    </LinearLayout>-->
+<!--                </androidx.cardview.widget.CardView>-->
+
+<!--                <androidx.cardview.widget.CardView-->
+<!--                    android:layout_width="160dp"-->
+<!--                    android:layout_height="180dp"-->
+<!--                    android:layout_row="1"-->
+<!--                    android:layout_rowWeight="1"-->
+<!--                    android:layout_column="0"-->
+<!--                    android:layout_columnWeight="1"-->
+<!--                    android:layout_margin="10dp"-->
+<!--                    android:padding="10dp"-->
+<!--                    app:cardBackgroundColor="@color/white"-->
+<!--                    app:cardCornerRadius="10dp"-->
+<!--                    app:cardElevation="10dp">-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:orientation="vertical">-->
+
+<!--                        <ImageView-->
+<!--                            android:layout_width="100dp"-->
+<!--                            android:layout_height="100dp"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:src="@drawable/tro3" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:text="Nhà trọ"-->
+<!--                            android:textAllCaps="true"-->
+<!--                            android:textStyle="bold" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:text="1.6 triệu VND/căn"-->
+<!--                            android:textColor="#FF5722"-->
+<!--                            android:textStyle="bold" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="40dp"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:text="88/9 Nguyễn Văn Trỗi, Quận Phú Nhuận" />-->
+<!--                    </LinearLayout>-->
+<!--                </androidx.cardview.widget.CardView>-->
+
+<!--                <androidx.cardview.widget.CardView-->
+<!--                    android:layout_width="160dp"-->
+<!--                    android:layout_height="180dp"-->
+<!--                    android:layout_row="1"-->
+<!--                    android:layout_rowWeight="1"-->
+<!--                    android:layout_column="1"-->
+<!--                    android:layout_columnWeight="1"-->
+<!--                    android:layout_margin="10dp"-->
+<!--                    android:padding="10dp"-->
+<!--                    app:cardBackgroundColor="@color/white"-->
+<!--                    app:cardCornerRadius="10dp"-->
+<!--                    app:cardElevation="10dp">-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:orientation="vertical">-->
+
+<!--                        <ImageView-->
+<!--                            android:layout_width="100dp"-->
+<!--                            android:layout_height="100dp"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:src="@drawable/tro4" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:text="Nhà trọ"-->
+<!--                            android:textAllCaps="true"-->
+<!--                            android:textStyle="bold" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:text="1.6 triệu VND/căn"-->
+<!--                            android:textColor="#FF5722"-->
+<!--                            android:textStyle="bold" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="40dp"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:text="88/9 Nguyễn Văn Trỗi, Quận Phú Nhuận" />-->
+<!--                    </LinearLayout>-->
+<!--                </androidx.cardview.widget.CardView>-->
+
+<!--                <androidx.cardview.widget.CardView-->
+<!--                    android:layout_width="160dp"-->
+<!--                    android:layout_height="180dp"-->
+<!--                    android:layout_row="2"-->
+<!--                    android:layout_rowWeight="1"-->
+<!--                    android:layout_column="0"-->
+<!--                    android:layout_columnWeight="1"-->
+<!--                    android:layout_margin="10dp"-->
+<!--                    android:padding="10dp"-->
+<!--                    app:cardBackgroundColor="@color/white"-->
+<!--                    app:cardCornerRadius="10dp"-->
+<!--                    app:cardElevation="10dp">-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:orientation="vertical">-->
+
+<!--                        <ImageView-->
+<!--                            android:layout_width="100dp"-->
+<!--                            android:layout_height="100dp"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:src="@drawable/tro5" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:text="Nhà trọ"-->
+<!--                            android:textAllCaps="true"-->
+<!--                            android:textStyle="bold" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:text="1.6 triệu VND/căn"-->
+<!--                            android:textColor="#FF5722"-->
+<!--                            android:textStyle="bold" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="40dp"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:text="88/9 Nguyễn Văn Trỗi, Quận Phú Nhuận" />-->
+<!--                    </LinearLayout>-->
+<!--                </androidx.cardview.widget.CardView>-->
+
+<!--                <androidx.cardview.widget.CardView-->
+<!--                    android:layout_width="160dp"-->
+<!--                    android:layout_height="180dp"-->
+<!--                    android:layout_row="2"-->
+<!--                    android:layout_rowWeight="1"-->
+<!--                    android:layout_column="1"-->
+<!--                    android:layout_columnWeight="1"-->
+<!--                    android:layout_margin="10dp"-->
+<!--                    android:padding="10dp"-->
+<!--                    app:cardBackgroundColor="@color/white"-->
+<!--                    app:cardCornerRadius="10dp"-->
+<!--                    app:cardElevation="10dp">-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:orientation="vertical">-->
+
+<!--                        <ImageView-->
+<!--                            android:layout_width="100dp"-->
+<!--                            android:layout_height="100dp"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:src="@drawable/tro6" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:text="Nhà trọ"-->
+<!--                            android:textAllCaps="true"-->
+<!--                            android:textStyle="bold" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:text="1.6 triệu VND/căn"-->
+<!--                            android:textColor="#FF5722"-->
+<!--                            android:textStyle="bold" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="40dp"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:text="88/9 Nguyễn Văn Trỗi, Quận Phú Nhuận" />-->
+<!--                    </LinearLayout>-->
+<!--                </androidx.cardview.widget.CardView>-->
+
+<!--                <androidx.cardview.widget.CardView-->
+<!--                    android:layout_width="160dp"-->
+<!--                    android:layout_height="180dp"-->
+<!--                    android:layout_row="3"-->
+<!--                    android:layout_rowWeight="1"-->
+<!--                    android:layout_column="0"-->
+<!--                    android:layout_columnWeight="1"-->
+<!--                    android:layout_margin="10dp"-->
+<!--                    android:padding="10dp"-->
+<!--                    app:cardBackgroundColor="@color/white"-->
+<!--                    app:cardCornerRadius="10dp"-->
+<!--                    app:cardElevation="10dp">-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:orientation="vertical">-->
+
+<!--                        <ImageView-->
+<!--                            android:layout_width="100dp"-->
+<!--                            android:layout_height="100dp"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:src="@drawable/tro7" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:text="Nhà trọ"-->
+<!--                            android:textAllCaps="true"-->
+<!--                            android:textStyle="bold" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:text="1.6 triệu VND/căn"-->
+<!--                            android:textColor="#FF5722"-->
+<!--                            android:textStyle="bold" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="40dp"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:text="88/9 Nguyễn Văn Trỗi, Quận Phú Nhuận" />-->
+<!--                    </LinearLayout>-->
+<!--                </androidx.cardview.widget.CardView>-->
+
+<!--                <androidx.cardview.widget.CardView-->
+<!--                    android:layout_width="160dp"-->
+<!--                    android:layout_height="180dp"-->
+<!--                    android:layout_row="3"-->
+<!--                    android:layout_rowWeight="1"-->
+<!--                    android:layout_column="1"-->
+<!--                    android:layout_columnWeight="1"-->
+<!--                    android:layout_margin="10dp"-->
+<!--                    android:padding="10dp"-->
+<!--                    app:cardBackgroundColor="@color/white"-->
+<!--                    app:cardCornerRadius="10dp"-->
+<!--                    app:cardElevation="10dp">-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:orientation="vertical">-->
+
+<!--                        <ImageView-->
+<!--                            android:layout_width="100dp"-->
+<!--                            android:layout_height="100dp"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:src="@drawable/tro4" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:text="Nhà trọ"-->
+<!--                            android:textAllCaps="true"-->
+<!--                            android:textStyle="bold" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:text="1.6 triệu VND/căn"-->
+<!--                            android:textColor="#FF5722"-->
+<!--                            android:textStyle="bold" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="40dp"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:text="88/9 Nguyễn Văn Trỗi, Quận Phú Nhuận" />-->
+<!--                    </LinearLayout>-->
+<!--                </androidx.cardview.widget.CardView>-->
+<!--            </GridLayout>-->
+<!--        </RelativeLayout>-->
+<!--    </ScrollView>-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_home"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="89dp"
+        android:scrollbars="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutHeader">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
